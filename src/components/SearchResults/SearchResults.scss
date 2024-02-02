@@ -1,0 +1,42 @@
+.search-results-container {
+  display: grid;
+  gap: 20px;
+  .search-results-item {
+    display: grid;
+    grid-template-columns: 160px auto 150px;
+    gap: 20px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      max-width: 160px;
+    }
+    .search-results-item-description {
+      .sr-item-description-price {
+        display: flex;
+        align-items: center;
+        font-size: 23px;
+        font-weight: 500;
+        .sr-item-description-price-decimals {
+          font-size: 16px;
+          margin-left: 4px;
+        }
+      }
+      .sr-item-description-title {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-results-container {
+    .search-results-item {
+      grid-template-columns: 1fr;
+      .search-results-item-category {
+        padding-bottom: 10px;
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+
+.standardlayout{
+  display: grid;
+  grid-template-areas:
+  'header'
+  'main';
+  header {
+    position: sticky;
+    top: 0;
+  }
+  main {
+    height: calc(100vh - var(--header-height));
+    overflow: auto;
+  }
+}
+
+.home-container {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  .home-logo {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+  }
+}
